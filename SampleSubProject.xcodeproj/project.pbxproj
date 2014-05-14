@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		696750A21923BE7500E15213 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 696750A11923BE7500E15213 /* Foundation.framework */; };
 		696750A71923BE7500E15213 /* SampleSubProject.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 696750A61923BE7500E15213 /* SampleSubProject.h */; };
-		696750A91923BE7500E15213 /* SampleSubProject.m in Sources */ = {isa = PBXBuildFile; fileRef = 696750A81923BE7500E15213 /* SampleSubProject.m */; };
 		696750B01923BE7500E15213 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 696750AF1923BE7500E15213 /* XCTest.framework */; };
 		696750B11923BE7500E15213 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 696750A11923BE7500E15213 /* Foundation.framework */; };
 		696750B31923BE7500E15213 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 696750B21923BE7500E15213 /* UIKit.framework */; };
 		696750B61923BE7500E15213 /* libSampleSubProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6967509E1923BE7500E15213 /* libSampleSubProject.a */; };
 		696750BC1923BE7500E15213 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 696750BA1923BE7500E15213 /* InfoPlist.strings */; };
 		696750BE1923BE7500E15213 /* SampleSubProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 696750BD1923BE7500E15213 /* SampleSubProjectTests.m */; };
+		696750C91923BFFD00E15213 /* SSHelloer.m in Sources */ = {isa = PBXBuildFile; fileRef = 696750C81923BFFD00E15213 /* SSHelloer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,13 +46,14 @@
 		696750A11923BE7500E15213 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		696750A51923BE7500E15213 /* SampleSubProject-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SampleSubProject-Prefix.pch"; sourceTree = "<group>"; };
 		696750A61923BE7500E15213 /* SampleSubProject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleSubProject.h; sourceTree = "<group>"; };
-		696750A81923BE7500E15213 /* SampleSubProject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleSubProject.m; sourceTree = "<group>"; };
 		696750AE1923BE7500E15213 /* SampleSubProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleSubProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		696750AF1923BE7500E15213 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		696750B21923BE7500E15213 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		696750B91923BE7500E15213 /* SampleSubProjectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SampleSubProjectTests-Info.plist"; sourceTree = "<group>"; };
 		696750BB1923BE7500E15213 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		696750BD1923BE7500E15213 /* SampleSubProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleSubProjectTests.m; sourceTree = "<group>"; };
+		696750C71923BFFD00E15213 /* SSHelloer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSHelloer.h; sourceTree = "<group>"; };
+		696750C81923BFFD00E15213 /* SSHelloer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSHelloer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +111,9 @@
 		696750A31923BE7500E15213 /* SampleSubProject */ = {
 			isa = PBXGroup;
 			children = (
+				696750C71923BFFD00E15213 /* SSHelloer.h */,
 				696750A61923BE7500E15213 /* SampleSubProject.h */,
-				696750A81923BE7500E15213 /* SampleSubProject.m */,
+				696750C81923BFFD00E15213 /* SSHelloer.m */,
 				696750A41923BE7500E15213 /* Supporting Files */,
 			);
 			path = SampleSubProject;
@@ -224,7 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				696750A91923BE7500E15213 /* SampleSubProject.m in Sources */,
+				696750C91923BFFD00E15213 /* SSHelloer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +336,7 @@
 				GCC_PREFIX_HEADER = "SampleSubProject/SampleSubProject-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -346,6 +349,7 @@
 				GCC_PREFIX_HEADER = "SampleSubProject/SampleSubProject-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

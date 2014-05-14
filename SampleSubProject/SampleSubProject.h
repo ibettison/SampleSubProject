@@ -7,7 +7,5 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <SampleSubProject/SSHelloer.h>
 
-@interface SampleSubProject : NSObject
-
-@end
